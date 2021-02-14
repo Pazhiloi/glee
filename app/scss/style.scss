@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -179,6 +180,87 @@
     width: 1px;
     height: 17px;
     background-color: #000;
+  }
+}
+
+.top-slider{
+  &__item{
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    min-height: 820px;
+    background-color: #fcd7b6;
+  }
+ 
+  &__title{
+    max-width: 550px;
+    width: 100%;
+    padding-bottom: 40px;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    color: #243f4d;
+    text-transform: uppercase;
+  }
+  &__text{
+    max-width: 387px;
+    width: 100%;
+    font-size: 18px;
+    color: #436372;
+    margin-bottom: 40px;
+  }
+  &__link{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 28px;
+    @extend %vbtn;
+    @extend %rubik-500;
+    width: 200px;
+    min-height: 60px;
+    font-size: 15px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #436372;
+    border-radius: 0;
+  }
+  &__link::after{
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    background-image: url('../images/icons/arrow.svg');
+    width: 22px;
+    height: 9px;
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -70px;
+    li{
+      padding: 0 6px;
+      button{
+        width: 29px;
+        height: 29px;
+        padding: 0;
+        @extend %myriad-400;
+        font-size: 15px;
+        line-height: 12px;
+        color: #243f4d;
+        background-color: #fde3cc;
+        border-radius: 50%;
+        border: none;
+        outline: 0;
+      }
+       &.slick-active{
+        button{
+          @extend %rubik-500;
+          color: #243f4d;
+          background-color: #fff;
+        }
+      }
+    }
   }
 }
   

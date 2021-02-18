@@ -6,6 +6,9 @@
 
 
 .header{
+  &__logo{
+    margin-left: 160px;
+  }
   &__inner{
     display: flex;
     justify-content: space-between;
@@ -598,6 +601,79 @@
   &__item:not(:first-child){
     margin-left: 95px;
   }
+}
+
+.modal{
+  max-width: 470px;
+  margin: 0 auto 120px;
+  padding: 115px 0 0;
+  &__label{
+    display: block;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 48px;
+    color: #436372;
+  }
+  &__label{
+    margin-bottom: 35px;
+  }
+  &__label--margin{
+    margin-bottom: 0;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    background-color: #fff;
+    margin-top: 15px;
+    height: 60px;
+    padding: 0 15px;
+    outline: 0;
+   }
+  &__btn{
+    display: block;
+    background-color: #436372;
+    color: #fff;
+    padding: 17px 0;
+    border: none;
+    width: 100%;
+    outline: 0;
+    cursor: pointer;
+   }
+   &__wrapper{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 34px 0 34px;
+     margin-bottom: 35px;
+     border-bottom: 2px solid #f6f6f6;
+   }
+   &__error{
+    font-size: 14px;
+    line-height: 48px;
+    color: #436372;
+   }
+   &__text{
+    text-align: center;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #436372;
+    margin-bottom: 23px;
+   }
+   &__link{
+    display: block;
+    text-align: center;
+    @extend %rubik-500;
+    font-size: 18px;
+    background-color: #fff;
+    color: #243f4d;
+    padding: 17px 0;
+    border: 2px solid #a3bbc8;
+    width: 100%;
+    outline: 0;
+    cursor: pointer;
+   }
 }
 
 

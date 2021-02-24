@@ -85,3 +85,39 @@ a{
     line-height: 24px;
   }
 }
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  .pagination__list{
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+  }
+  &__item{
+    width: 50px;
+    height: 50px;
+    margin-right: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item--active{
+    background-color: $accent;
+  }
+  &__link--active{
+    color: #fff;
+  }
+  &__next{
+    width: 73px;
+    height: 50px;
+  }
+  &__item,
+  &__next{
+    @extend %rubik-400;
+    border: 1px solid $accent;
+    color: #243f4d;
+  }
+}
+
